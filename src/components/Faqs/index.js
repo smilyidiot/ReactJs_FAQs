@@ -4,22 +4,21 @@ import FaqItem from '../FaqItem'
 import './index.css'
 
 class Faqs extends Component {
-  state = {
-    isActive: false,
-    activeId: null,
-  }
+  // state = {
+  //   isActive: false,
+  //   activeId: null,
+  // }
 
-  showContent = id => {
-    this.setState(prevState => ({
-      activeId: id,
-      isActive: !prevState.isActive,
-    }))
-  }
+  // showContent = id => {
+  //   this.setState(prevState => ({
+  //     //   activeId: id,
+  //     isActive: !prevState.isActive,
+  //   }))
+  // }
 
   render() {
     const {faqsList} = this.props
-    const {activeId} = this.state
-    console.log(faqsList)
+    // console.log(faqsList)
 
     return (
       <div className="main-container">
@@ -30,9 +29,9 @@ class Faqs extends Component {
               <FaqItem
                 content={each}
                 key={each.id}
-                state={this.state}
-                activeId={activeId}
-                viewContent={this.showContent}
+                // state={this.state}
+                // activeId={activeId}
+                // viewContent={this.showContent}
               />
             ))}
           </ul>
